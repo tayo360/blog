@@ -1,19 +1,17 @@
 const Header = {
-  render: () => {
-    return `<nav class="navigation container d-flex">
-          <!-- logo -->
-          <a class="logo" href="#">tayo360</a>
-          <!-- menu -->
-          <ul class="nav-list d-flex">
-            <li><a href="/#/">Home</a></li>
-            <li><a href="/#/about">About</a></li>
-            <li><a href="/#/contact">Contact Us</a></li>
-          </ul>
-          <!-- hamburger -->
-          <div class="hamburger"><i class="bx bx-menu-alt-right"></i></div>
-        </nav>`;
-  },
-  after_render: () => {
+ render: ()=> {
+  return `<nav class="navigation container d-flex">
+        <a class="logo" href="/#/">tayo360</a>
+        <ul class="nav-list d-flex">
+          <li><a href="/#/home">Home</a></li>
+          <li><a href="/#/about">About</a></li>
+          <li><a href="/#/contact">Contact Us</a></li>
+        </ul>
+
+        <div class="hamburger"><i class="fas fa-align-justify"></i></i></div>
+      </nav>`
+ },
+ after_render: () => {
     const navList = document.querySelector(".nav-list");
     const hamburger = document.querySelector(".hamburger");
     const header = document.querySelector(".header");
@@ -46,3 +44,4 @@ const Header = {
 };
 
 export default Header;
+ 
